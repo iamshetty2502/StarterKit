@@ -62,8 +62,8 @@ dependencies {
     implementation 'android.arch.lifecycle:extensions:1.1.1'
     implementation 'de.mrmaffen:vlc-android-sdk:1.9.8'
 
-    //  Picasso for image icon
-    implementation 'com.squareup.picasso:picasso:2.5.2'
+    //  Glide for image icon
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
 
     //KRecyclerViewAdapter
     implementation 'com.github.KalpeshTalkar:KRecyclerViewAdapter:1.0.0'
