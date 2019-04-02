@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="zero">0dp</dimen>
+    <dimen name="app_spacing_2dp">2dp</dimen>
+    <dimen name="app_spacing_5dp">5dp</dimen>
+    <dimen name="app_spacing_10dp">10dp</dimen>
+    <dimen name="app_spacing_15dp">15dp</dimen>
+    <dimen name="app_spacing_20dp">20dp</dimen>
+    <dimen name="separator_size">0.5dp</dimen>
+
+    <!-- Font Sizes -->
+    <dimen name="desc_font_size_10">10sp</dimen>
+    <dimen name="desc_font_size_12">12sp</dimen>
+    <dimen name="desc_font_size_15">15sp</dimen>
+    <dimen name="desc_font_size_16">16sp</dimen>
+    <dimen name="header_font_size">18sp</dimen>
+    <dimen name="title_font_size">20sp</dimen>
+
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_x_large">25sp</dimen>
+    <dimen name="text_size_xx_large">28sp</dimen>
+
+    <dimen name="corner_radius_5dp">5dp</dimen>
+    <dimen name="corner_radius_10dp">10dp</dimen>
+    <dimen name="corner_radius_15dp">15dp</dimen>
+    <dimen name="corner_radius_20dp">20dp</dimen>
+
+    <dimen name="elevation_5dp">5dp</dimen>
+    <dimen name="elevation_7dp">7dp</dimen>
+    <dimen name="elevation_10dp">10dp</dimen>
+
+
+
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">StarterKit</string>
+    <string name="lbl_btn_add">Submit</string>
+    <string name="lbl_btn_cancel">Cancel</string>
+    <string name="header">Header</string>
+    <string name="title">Title</string>
+</resources>
