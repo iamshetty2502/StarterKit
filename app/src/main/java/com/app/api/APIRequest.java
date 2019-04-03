@@ -6,10 +6,6 @@ import android.content.Context;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Deep on 8/24/2017.
- */
-
 public class APIRequest {
 
     public String url = "";

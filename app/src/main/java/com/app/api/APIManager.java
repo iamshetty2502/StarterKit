@@ -15,10 +15,6 @@ import com.app.App;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Deep on 8/24/2017.
- */
-
 public class APIManager {
 
     public static String NO_CONNECTIVITY_ERROR = "The Internet connection appears to be offline.";

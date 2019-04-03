@@ -8,10 +8,6 @@ import com.android.volley.toolbox.Volley;
 import com.app.App;
 
 
-/**
- * Created by Deep on 8/24/2017.
- */
-
 class APIRequestQueue {
 
     private static APIRequestQueue mInstance;

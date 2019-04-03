@@ -7,10 +7,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.widget.Toast;
 
-/**
- * Created by kalpesh on 07/11/17.
- */
-
 public class AlertUtils {
 
     /**
