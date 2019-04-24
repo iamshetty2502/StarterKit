@@ -32,7 +32,7 @@ public class APIRequest {
         if (headers == null) {
             headers = new HashMap<>();
             headers.put("Content-Type", "application/json");
-            headers.put("x-api-key", "FJssllekan84rX7yKTmhP5Tdi9YIwacm69G5MCTv");
+            headers.put("x-api-key", "");
         }
         this.headers = headers;
         if (context != null) {
