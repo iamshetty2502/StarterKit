@@ -17,17 +17,57 @@
         android:layout_height="match_parent"
         tools:context=".activities.mainActivity.MainActivity">
 
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/app_spacing_15dp"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/app_spacing_15dp"
+            android:text="@={mainViewModel.username}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/app_spacing_15dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:padding="@dimen/app_spacing_15dp"
+            android:text="@={mainViewModel.password}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username" />
+
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_spacing_15dp"
             android:onClick="@{(view)->mainViewModel.onButtonClicked(view)}"
-            android:text="@{mainViewModel.buttonText}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Click 0" />
+            android:text="@string/submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_spacing_15dp"
+            android:adapter="@{mainViewModel.recyclerViewAdapter}"
+            android:padding="@dimen/app_spacing_15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_layout" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>

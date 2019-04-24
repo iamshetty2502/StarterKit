@@ -4,6 +4,7 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 
 import com.app.R;
 import com.app.databinding.ActivityMainBinding;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         ActivityMainBinding activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         mainViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         activityMainBinding.setMainViewModel(mainViewModel);
+        activityMainBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         activityMainBinding.setLifecycleOwner(this);
     }
 }

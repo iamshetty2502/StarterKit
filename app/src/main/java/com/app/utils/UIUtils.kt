@@ -1,5 +1,6 @@
 package com.app.utils
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
 import android.graphics.drawable.Drawable
@@ -15,6 +16,7 @@ import android.support.v4.view.ViewCompat.LAYER_TYPE_SOFTWARE
 import android.view.Gravity
 import android.view.View
 import com.app.R
+import java.text.SimpleDateFormat
 
 
 class UIUtils {
@@ -66,9 +68,23 @@ class UIUtils {
             return shape
         }
 
+        fun getBgDrawable(context: Context, @DimenRes cornerRadiusRes: Int,
+                          @ColorRes backgroundColorRes: Int): Drawable {
+            var radius = 0f
+            if (cornerRadiusRes != 0) {
+                radius = context.resources.getDimension(cornerRadiusRes)
+            }
+            val bgColor = ContextCompat.getColor(context, backgroundColorRes)
+
+            val shape = GradientDrawable()
+            shape.shape = GradientDrawable.RECTANGLE
+            shape.cornerRadii = floatArrayOf(radius, radius, radius, radius, radius, radius, radius, radius)
+            shape.setColor(bgColor)
+            return shape
+        }
+
         fun getIcon(context: Context, @DrawableRes icon: Int, state: Int): Drawable {
-            val mDrawable = context.resources.getDrawable(icon, null)
-                    .constantState.newDrawable().mutate()
+            val mDrawable = context.resources.getDrawable(icon, null).constantState.newDrawable().mutate()
             if (state > 0) {
                 mDrawable.colorFilter = PorterDuffColorFilter(ContextCompat.getColor(context, R.color.white), PorterDuff.Mode.SRC_ATOP)
             } else {
@@ -144,6 +160,16 @@ class UIUtils {
             drawable.setLayerInset(0, elevationValue, elevationValue * 2, elevationValue, elevationValue * 2)
 
             return drawable
+        }
+
+        @SuppressLint("SimpleDateFormat")
+        fun formatDate(date: String): String {
+            if (date.isEmpty()) return ""
+            val inputDateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+            val outputDateFormat = SimpleDateFormat("dd MMM YYYY HH:mm")
+
+            val inputDate = inputDateFormat.parse(date)
+            return outputDateFormat.format(inputDate)
         }
     }
 

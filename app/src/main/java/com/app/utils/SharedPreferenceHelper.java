@@ -89,7 +89,7 @@ public class SharedPreferenceHelper {
     }
 
     /// Store data locally for specific key
-    public static void putValue(Object value, String key) {
+    public static void putValue(String key, Object value) {
         SharedPreferences.Editor editor = getEditor();
         if (value instanceof String) {    // String
             editor.putString(key, (String) value);
@@ -107,6 +107,15 @@ public class SharedPreferenceHelper {
             editor.putLong(key, (long) value);
         }
         editor.commit();
+    }
+
+
+    public static String getAuthToken() {
+        return SharedPreferenceHelper.getValue(Constants.AUTH_TOKEN, "-1", String.class);
+    }
+
+    public static String getDisplayName() {
+        return SharedPreferenceHelper.getValue(Constants.DISPLAY_NAME, "ROBOT X", String.class);
     }
 
 
