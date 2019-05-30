@@ -119,4 +119,7 @@ public class SharedPreferenceHelper {
     }
 
 
+    public static void clearData() {
+        SharedPreferenceHelper.getSharedPrefs().edit().clear().apply();
+    }
 }
